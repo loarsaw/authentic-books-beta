@@ -85,7 +85,7 @@ function footer() {
         <div className="row">
           <div className="column">
             <div className="ss-copyright">
-              <span>© Copyright Calvin 2020</span>
+              <span>© authenticbooks.in {new Date().getFullYear()} </span>
               <span>
                 Design by <a href="https://www.styleshout.com/">StyleShout</a>
               </span>
