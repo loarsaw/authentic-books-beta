@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Date from "./date";
-function content({ title, coverImage, date, excerpt, author, slug }) {
+import Link from "next/link";
+function Content({ title, coverImage, date, excerpt, author, slug }) {
   const imgSrc = `${coverImage.imgix_url} 1x , ${coverImage.imgix_url} 2x `;
   return (
     // <section className="s-content s-content--no-top-padding">
@@ -14,59 +14,53 @@ function content({ title, coverImage, date, excerpt, author, slug }) {
     // <span></span>
     // <span></span>
     // </div>
-    <>
-      <article className="brick entry">
-        <div className="entry__thumb">
-          <a href="single-standard.html" className="thumb-link">
-            <img
-              src={coverImage.imgix_url}
-              srcSet={imgSrc}
-              // "images/thumbs/masonry/macbook-600.jpg 1x, images/thumbs/masonry/macbook-1200.jpg 2x"
-              alt=""
-            />
-          </a>
+    <article className="brick entry">
+      <div className="entry__thumb">
+        <div className="thumb-link">
+          <img
+            src={coverImage.imgix_url}
+            srcSet={imgSrc}
+            // "images/thumbs/masonry/macbook-600.jpg 1x, images/thumbs/masonry/macbook-1200.jpg 2x"
+            alt=""
+          />
         </div>
-        <div className="entry__text">
-          <div className="entry__header">
-            <h1 className="entry__title">
-              <a href="https://www.dreamhost.com/r.cgi?287326">
-                {title}
-                {/* Title here */}
-              </a>
-            </h1>
+      </div>
+      <div className="entry__text">
+        <div className="entry__header">
+          <h1 className="entry__title">
+            {console.log({ slug })}
+            <a>{title}</a>
+            {/* </Link> */}
+          </h1>
 
-            <div className="entry__meta">
-              <span className="byline">
-                By:
-                <span className="author">
-                  <a href="https://www.dreamhost.com/r.cgi?287326">
-                    {author.title}
-                    {/* author name */}
-                  </a>
-                </span>
-              </span>
-              <span className="cat-links">
+          <div className="entry__meta">
+            <span className="byline">
+              By:
+              <span className="author">
                 <a href="https://www.dreamhost.com/r.cgi?287326">
-                  <Date dateString={date} />
+                  {author.title}
+                  {/* author name */}
                 </a>
               </span>
-            </div>
+            </span>
+            <span className="cat-links">
+              <a href="https://www.dreamhost.com/r.cgi?287326">
+                <Date dateString={date} />
+              </a>
+            </span>
           </div>
-          <div className="entry__excerpt">
-            <p>
-              {excerpt}
-              {/* Excerpt */}
-            </p>
-          </div>
-          <a
-            className="entry__more-link"
-            href="https://www.dreamhost.com/r.cgi?287326"
-          >
-            Learn More
-          </a>
         </div>
-      </article>
-    </>
+        <div className="entry__excerpt">
+          <p>
+            {excerpt}
+            {/* Excerpt */}
+          </p>
+        </div>
+        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+          <a className="entry__more">Learn More</a>
+        </Link>
+      </div>
+    </article>
     // </div>
     // </div>
     // </div>
@@ -74,4 +68,4 @@ function content({ title, coverImage, date, excerpt, author, slug }) {
   );
 }
 
-export default content;
+export default Content;

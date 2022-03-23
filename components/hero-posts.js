@@ -27,10 +27,8 @@ function HeroPost({ title, coverImage, date, excerpt, author, slug }) {
                   </span>
                 </div>
                 <h1 className="s-hero__slide-text">
-                  <Link as={`/single`} href="/single">
-                    <a href="#0">
-                      Tips and Ideas to Help You Start Freelancing.
-                    </a>
+                  <Link as={`/posts/${slug}`} href="/posts/[slug]">
+                    <a>Tips and Ideas to Help You Start Freelancing.</a>
                   </Link>
                 </h1>
               </div>

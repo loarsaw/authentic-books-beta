@@ -5,7 +5,7 @@ function contactappbar() {
     <header className="s-header s-header--opaque">
       <div className="s-header__logo">
         <a className="logo" href="index.html">
-          <img src="images/logo.svg" alt="Homepage" />
+          <img src="/images/logo.svg" alt="Homepage" />
         </a>
       </div>
       <div className="row s-header__navigation">

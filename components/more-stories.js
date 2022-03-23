@@ -1,5 +1,5 @@
 import PostPreview from "./content";
-
+import Link from "next/link";
 export default function MoreStories({ posts }) {
   return (
     <section className="s-content s-content--no-top-padding">
@@ -24,7 +24,6 @@ export default function MoreStories({ posts }) {
                 excerpt={post.metadata.excerpt}
               />
             ))}
-          
           </div>
         </div>
       </div>

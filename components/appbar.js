@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 function appbar() {
@@ -5,7 +6,7 @@ function appbar() {
     <header className="s-header">
       <div className="s-header__logo">
         <a className="logo" href="index.html">
-          <img src="images/logo.svg" alt="Homepage" />
+          <img src="/images/logo.svg" alt="Homepage" />
         </a>
       </div>
 
