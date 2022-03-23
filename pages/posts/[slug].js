@@ -45,13 +45,13 @@ export default function Post({ post, morePosts, preview }) {
   }
   return (
     <>
-      <Head>
-        <title>{post.title} | Authentic Books</title>
+      {/* <Head>
+        <title> Authentic Books | Posts </title>
         <meta
           property="og:image"
           content={post.metadata.cover_image.imgix_url}
         />
-      </Head>
+      </Head> */}
       <Navbar />
       {console.log({ post })}
       <section className="s-content">
