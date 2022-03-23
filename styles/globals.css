@@ -4621,7 +4621,7 @@
  }
  
  .s-content__entry-meta .cat-links a:last-child::after {
-     display: none;
+     /* display: none; */
  }
  
  .s-content__entry-meta .entry-tags a {

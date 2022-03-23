@@ -29,8 +29,9 @@ function Content({ title, coverImage, date, excerpt, author, slug }) {
         <div className="entry__header">
           <h1 className="entry__title">
             {console.log({ slug })}
-            <a>{title}</a>
-            {/* </Link> */}
+            <Link as={`/posts/${slug}`} href="/posts/[slug]">
+              <a>{title}</a>
+            </Link>
           </h1>
 
           <div className="entry__meta">
@@ -43,7 +44,7 @@ function Content({ title, coverImage, date, excerpt, author, slug }) {
                 </a>
               </span>
             </span>
-            <span className="cat-links">
+            <span  pan className="cat-links">
               <a href="https://www.dreamhost.com/r.cgi?287326">
                 <Date dateString={date} />
               </a>
@@ -57,7 +58,7 @@ function Content({ title, coverImage, date, excerpt, author, slug }) {
           </p>
         </div>
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a className="entry__more">Learn More</a>
+          <a className="entry__more-link">Learn More</a>
         </Link>
       </div>
     </article>
