@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Date from "./date";
 import Link from "next/link";
@@ -28,7 +29,6 @@ function Content({ title, coverImage, date, excerpt, author, slug }) {
       <div className="entry__text">
         <div className="entry__header">
           <h1 className="entry__title">
-            {console.log({ slug })}
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
               <a>{title}</a>
             </Link>
@@ -38,14 +38,14 @@ function Content({ title, coverImage, date, excerpt, author, slug }) {
             <span className="byline">
               By:
               <span className="author">
-                <a href="https://www.dreamhost.com/r.cgi?287326">
+                <a>
                   {author.title}
                   {/* author name */}
                 </a>
               </span>
             </span>
-            <span  pan className="cat-links">
-              <a href="https://www.dreamhost.com/r.cgi?287326">
+            <span pan className="cat-links">
+              <a>
                 <Date dateString={date} />
               </a>
             </span>
