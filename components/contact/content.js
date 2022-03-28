@@ -48,23 +48,29 @@ function content() {
 
                 <div className="row block-large-1-2 block-tab-full s-content__blocks">
                   <div className="column">
-                    <h4>Where to Find Us</h4>
+                    <h4>Got A Book 😃</h4>
                     <p>
-                      1600 Amphitheatre Parkway
+                      Mail 📩
                       <br />
-                      Mountain View, CA
+                      ZIP File to :
                       <br />
-                      94043 US
+                      <a href="mailto:contentmanager@authenticbooks.in">
+                        Content Manager
+                      </a>
                     </p>
                   </div>
 
                   <div className="column">
-                    <h4>Contact Info</h4>
+                    <h4>Got A Review 😊</h4>
                     <p>
-                      someone@yourdomain.com
+                      Mail to :
+                      <a href="mailto:contentmanager@authenticbooks.in">
+                        Content Manager
+                      </a>
+                      {/* Mail ID :<code>contentmanager@authenticbooks.in</code> */}
                       <br />
-                      info@yourdomain.com <br />
-                      Phone: (+63) 555 1212
+                      With Your Name and
+                      <p>Profile Picture(Optional)</p>
                     </p>
                   </div>
                 </div>
