@@ -86,9 +86,6 @@ function footer() {
           <div className="column">
             <div className="ss-copyright">
               <span>© authenticbooks.in {new Date().getFullYear()} </span>
-              <span>
-                Design by <a href="https://www.styleshout.com/">StyleShout</a>
-              </span>
             </div>
           </div>
         </div>

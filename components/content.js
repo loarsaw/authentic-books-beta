@@ -2,6 +2,7 @@
 import React from "react";
 import Date from "./date";
 import Link from "next/link";
+
 function Content({ title, coverImage, date, excerpt, author, slug }) {
   const imgSrc = `${coverImage.imgix_url} 1x , ${coverImage.imgix_url} 2x `;
   return (

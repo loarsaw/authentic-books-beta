@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "@/components/appbar";
 import HeroPost from "@/components/hero-posts";
 import Content from "@/components/content";
+import Head from "next/head";
 import Footer from "@/components/footer";
 import MoreStories from "@/components/more-stories";
 import { getAllPostsForHome } from "@/lib/api";
@@ -29,6 +30,13 @@ export default function Index({ allPosts }) {
   const morePosts = allPosts.slice(1);
   return (
     <>
+      <Head>
+        <title> Authentic Books </title>
+        {/* <meta
+          property="og:t"
+          content={"Get The List of Authentic Books"}
+        /> */}
+      </Head>
       <Navbar />
       <HeroPost
         title={heroPost.title}
