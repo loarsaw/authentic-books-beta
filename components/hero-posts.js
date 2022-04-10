@@ -1,4 +1,3 @@
-import { images } from "next.config";
 import React from "react";
 import Link from "next/link";
 
@@ -27,7 +26,8 @@ function HeroPost({ title, coverImage, date, excerpt, author, slug }) {
                   </span>
                 </div>
                 <h1 className="s-hero__slide-text">
-                  <Link as={`/posts/${slug}`} href="/posts/[slug]">
+                 <Link href={`/posts/${encodeURIComponent({slug})}`} as={`/posts/${slug}`}>
+                  {/* <Link as={`/posts/${slug}`} href="/posts/[slug]"> */}
                     <a>Tips and Ideas to Help You Start Freelancing.</a>
                   </Link>
                 </h1>

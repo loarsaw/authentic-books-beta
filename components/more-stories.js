@@ -5,7 +5,7 @@ export default function MoreStories({ posts }) {
     <section className="s-content s-content--no-top-padding">
       <div className="s-bricks">
         <div className="masonry">
-          <div className="bricks-wrapper h-group">
+          <div className="bricks-wrapper">
             <div className="grid-sizer"></div>
             <div className="lines">
               <span></span>
@@ -14,6 +14,7 @@ export default function MoreStories({ posts }) {
             </div>
 
             {posts.map((post) => (
+              
               <PostPreview
                 key={post.slug}
                 title={post.title}
