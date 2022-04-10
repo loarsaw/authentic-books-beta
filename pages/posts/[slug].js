@@ -52,7 +52,7 @@ export default function Post({ post, morePosts, preview }) {
       ) : (
         <>
           <Head>
-            <title> {post.title} || Authentic Books </title>
+            <title> {post.title} | Authentic Books </title>
             <meta
               property="og:image"
               content={post.metadata.cover_image.imgix_url}
@@ -129,6 +129,7 @@ export default function Post({ post, morePosts, preview }) {
                         </div>
                       </div>
                     </div>
+                  
 
                     <div className="s-content__pagenav">
                       <div className="prev-nav">

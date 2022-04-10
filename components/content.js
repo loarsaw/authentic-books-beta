@@ -16,6 +16,7 @@ function Content({ title, coverImage, date, excerpt, author, slug }) {
     // <span></span>
     // <span></span>
     // </div>
+
     <article className="brick entry">
       <div className="entry__thumb">
         <div className="thumb-link">
