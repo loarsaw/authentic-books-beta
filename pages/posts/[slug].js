@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { useRouter } from "next/router";
@@ -96,11 +98,16 @@ export default function Post({ post, morePosts, preview }) {
                     <div className="s-content__entry-meta">
                       <div className="entry-author meta-blk">
                         <div className="author-avatar">
-                          <img
-                            className="avatar"
-                            src={post.metadata.author.thumbnail}
-                            alt=""
-                          />
+                          <a
+                            target="_blank"
+                            href="https://www.amazon.in/gp/product/1501110365/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=1501110365&linkCode=as2&tag=authenticbook-21&linkId=9b9b24a759b62a2213c3edf5f166a184"
+                          >
+                            <img
+                              border="0"
+                              src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=IN&ASIN=1501110365&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=authenticbook-21"
+                              className="avatar"
+                            />
+                          </a>
                         </div>
                         <div className="byline">
                           <span className="bytext">Posted By</span>
@@ -129,7 +136,6 @@ export default function Post({ post, morePosts, preview }) {
                         </div>
                       </div>
                     </div>
-                  
 
                     <div className="s-content__pagenav">
                       <div className="prev-nav">
@@ -274,7 +280,7 @@ export default function Post({ post, morePosts, preview }) {
                               <div className="comment__avatar">
                                 <img
                                   className="avatar"
-                                  src="/images/avatars/user-04.jpg"
+                                  src="images/avatars/user-04.jpg"
                                   alt=""
                                   width="50"
                                   height="50"

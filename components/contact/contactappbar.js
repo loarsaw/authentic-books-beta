@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+
 function ContactAppBar() {
   const [active, setActive] = useState(false);
   return (
@@ -7,7 +8,7 @@ function ContactAppBar() {
       <header className="s-header s-header--opaque">
         <div className="s-header__logo">
           <a className="logo" href="index.html">
-            <img src="images/logo.svg" alt="Homepage" />
+            <img src="/images/logo.svg" />
           </a>
         </div>
         <div className="row s-header__navigation">
