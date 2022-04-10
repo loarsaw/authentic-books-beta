@@ -8,7 +8,7 @@ function content() {
         <div className="column large-12">
           <article className="s-content__entry">
             <div className="s-content__media">
-              <iFmg
+              <img
                 src="images/thumbs/contact/contact-1050.jpg"
                 srcSet="images/thumbs/contact/contact-2100.jpg 2100w, 
                                         images/thumbs/contact/contact-1050.jpg 1050w, 

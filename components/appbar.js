@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
+import Link from "next/link";
 
 function Appbar() {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   return (
     <div id="top" className={active ? "nav-wrap-is-visible" : ""}>
       <header className="s-header">
@@ -23,9 +24,7 @@ function Appbar() {
                 </a>
               </li>
               <li className="has-children">
-                <a href="#0" title="">
-                  Categories
-                </a>
+                <a title="">Categories</a>
                 <ul className="sub-menu">
                   <li>
                     <a href="category.html">Design</a>
@@ -54,9 +53,7 @@ function Appbar() {
                 </ul>
               </li>
               <li className="has-children">
-                <a href="#0" title="">
-                  Blog
-                </a>
+                <a title="">Blog</a>
                 <ul className="sub-menu">
                   <li>
                     <a href="single-video.html">Video Post</a>
@@ -75,21 +72,20 @@ function Appbar() {
                 </a>
               </li>
               <li>
-                <a href="about.html" title="">
-                  About
-                </a>
+                <Link href="/about">
+                  <a>About</a>
+                </Link>
               </li>
               <li>
-                <a href="contact.html" title="">
-                  Contact
-                </a>
+                <Link href="/contact">
+                  <a>Contact</a>
+                </Link>
               </li>
             </ul>
             <a
-              href="#0"
               title="Close Menu"
               className="s-header__overlay-close close-mobile-menu"
-              onClick={()=>setActive(!active)}
+              onClick={() => setActive(!active)}
             >
               Close
             </a>
@@ -98,9 +94,8 @@ function Appbar() {
 
         <a
           className="s-header__toggle-menu"
-          href="#0"
           title="Menu"
-          onClick={()=>setActive(!active)}
+          onClick={() => setActive(!active)}
         >
           <span>Menu</span>
         </a>
@@ -133,11 +128,7 @@ function Appbar() {
                 />
               </form>
 
-              <a
-                href="#0"
-                title="Close Search"
-                className="s-header__overlay-close"
-              >
+              <a title="Close Search" className="s-header__overlay-close">
                 Close
               </a>
             </div>
