@@ -25,31 +25,31 @@ function content() {
             <div className="s-content__primary">
               <div className="s-content__page-content">
                 <p className="lead">
-                  Lorem ipsum Deserunt est dolore Ut Excepteur nulla occaecat
-                  magna occaecat Excepteur nisi esse veniam dolor consectetur
-                  minim qui nisi esse deserunt commodo ea enim ullamco non
-                  voluptate consectetur minim aliquip Ut incididunt amet ut
-                  cupidatat.
+                  Books are referred to as a man’s best friend. They are very
+                  beneficial for mankind and have helped it evolve. There is a
+                  powerhouse of information and knowledge. Books offer us so
+                  many things without asking for anything in return. Books leave
+                  a deep impact on us and are responsible for uplifting our
+                  mood.
                 </p>
 
                 <p>
-                  Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat
-                  nostrud cupidatat dolor sunt sint sit nisi est eu exercitation
-                  incididunt adipisicing veniam velit id fugiat enim mollit amet
-                  anim veniam dolor dolor irure velit commodo cillum sit nulla
-                  ullamco magna amet magna cupidatat qui labore cillum sit in
-                  tempor veniam consequat non laborum adipisicing aliqua ea nisi
-                  sint ut quis proident ullamco ut dolore culpa occaecat ut
-                  laboris in sit minim cupidatat ut dolor voluptate enim veniam
-                  consequat occaecat fugiat in adipisicing in amet Ut nulla nisi
-                  non ut enim aliqua laborum mollit quis nostrud sed sed.
+                  Back in the day it was quite a deal to get you book publish ,
+                  but now its just the matter of few clicks. With services such
+                  as kindle publishing the amount work has been reduced to half
+                  the only thing writer to need to worry about is his or her
+                  work rest is covered by publisher. So you are a writer and has
+                  written a book or an article or owns a blog and want to be
+                  featured in the <b>authenticbooks.in </b> or if you want your masterpiece to
+                  be present to our reader then if might be a really good Idea
+                  to contact us.
                 </p>
 
                 <br />
 
                 <div className="row block-large-1-2 block-tab-full s-content__blocks">
                   <div className="column">
-                    <h4>Got A Book 😃</h4>
+                    <h4>Want to Advertise 😃</h4>
                     <p>
                       Mail 📩
                       <br />
