@@ -21,13 +21,17 @@ function HeroPost({ title, coverImage, date, excerpt, author, slug }) {
                   <span className="byline">
                     Posted by{" "}
                     <span className="author">
-                      <a href="#0">Jonathan Doe</a>
+                      <a href="#0">{author.title}</a>
                     </span>
                   </span>
                 </div>
+                {console.log({ author })}
                 <h1 className="s-hero__slide-text">
-                 <Link href={`/posts/${encodeURIComponent({slug})}`} as={`/posts/${slug}`}>
-                  {/* <Link as={`/posts/${slug}`} href="/posts/[slug]"> */}
+                  <Link
+                    href={`/posts/${encodeURIComponent({ slug })}`}
+                    as={`/posts/${slug}`}
+                  >
+                    {/* <Link as={`/posts/${slug}`} href="/posts/[slug]"> */}
                     <a>Tips and Ideas to Help You Start Freelancing.</a>
                   </Link>
                 </h1>

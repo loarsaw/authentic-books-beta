@@ -48,7 +48,7 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <>
       <Navbar />
-      {console.log({ post })}
+
       {router.isFallback ? (
         <h1>Loading</h1>
       ) : (
@@ -85,16 +85,10 @@ export default function Post({ post, morePosts, preview }) {
 
                   <div className="s-content__primary">
                     <div className="s-content__entry-content">
-                      {/* <blockquote>
-                      <p>
-                        So verily with hardship their is releif. Verily with
-                        hardship their is relief
-                      </p>
-                      <cite>Quran 94:5-6</cite>
-                    </blockquote> */}
+                      {console.log(post.content)}
                       {post.content}
                     </div>
-                    {console.log({ post })}
+
                     <div className="s-content__entry-meta">
                       <div className="entry-author meta-blk">
                         <div className="author-avatar">
