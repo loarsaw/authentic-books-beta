@@ -9,14 +9,14 @@ function HeroPost({ title, coverImage, date, excerpt, author, slug }) {
           <div className="s-hero__slide">
             <div
               className="s-hero__slide-bg"
-              style={{ backgroundImage: 'url("/images/slide1-bg-3000.jpg")' }}
+              style={{ backgroundImage: 'url("/images/hero-post.jpg")' }}
             ></div>
             <div className="row s-hero__slide-content">
               <div className="column">
                 <div className="s-hero__slide-meta">
                   <span className="cat-links">
                     <a href="#0">Lifestyle</a>
-                    <a href="#0">Design</a>
+                    <a href="#0">Motivation</a>
                   </span>
                   <span className="byline">
                     Posted by{" "}
@@ -32,7 +32,7 @@ function HeroPost({ title, coverImage, date, excerpt, author, slug }) {
                     as={`/posts/${slug}`}
                   >
                     {/* <Link as={`/posts/${slug}`} href="/posts/[slug]"> */}
-                    <a>Tips and Ideas to Help You Start Freelancing.</a>
+                    <a>{title}</a>
                   </Link>
                 </h1>
               </div>

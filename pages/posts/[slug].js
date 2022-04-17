@@ -79,7 +79,7 @@ export default function Post({ post, morePosts, preview }) {
 
                   <div className="s-content__entry-header">
                     <h1 className="s-content__title s-content__title--post">
-                      Hey, This Is An Audio Post.
+                      {post.title}
                     </h1>
                   </div>
 
@@ -356,7 +356,7 @@ export default function Post({ post, morePosts, preview }) {
                 </div>
               </div>
 
-              <div className="row comment-respond">
+              {/* <div className="row comment-respond">
                 <div id="respond" className="column">
                   <h3>
                     Add Comment
@@ -425,7 +425,7 @@ export default function Post({ post, morePosts, preview }) {
                     </fieldset>
                   </form>
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
         </>

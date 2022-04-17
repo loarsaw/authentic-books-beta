@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 function footer() {
   return (
     <footer className="s-footer">
@@ -8,10 +8,10 @@ function footer() {
           <div className="column large-3 medium-6 tab-12 s-footer__info">
             <h5>About Our Site</h5>
             <p>
-              Lorem ipsum Ut velit dolor Ut labore id fugiat in ut fugiat
-              nostrud qui in dolore commodo eu magna Duis cillum dolor officia
-              esse mollit proident Excepteur exercitation nulla. Lorem ipsum In
-              reprehenderit commodo aliqua irure.
+              Books are the lifeline, they just dont contain stories rather
+              invaluable life lesson.So here are you in safe heaven where you
+              can see and get list of books that are a must read. If you take
+              this list carefully it take change you perception.
             </p>
           </div>
           <div className="column large-2 medium-3 tab-6 s-footer__site-links">
@@ -19,7 +19,9 @@ function footer() {
 
             <ul>
               <li>
-                <a href="#0">About Us</a>
+                <Link href="/about">
+                  <a href="#0">About Us</a>
+                </Link>
               </li>
               <li>
                 <a href="#0">Blog</a>
