@@ -417,6 +417,7 @@ export default function Post({ post, morePosts, preview }) {
                       <input
                         name="submit"
                         id="submit"
+                        disabled
                         className="btn btn--primary btn-wide btn--large h-full-width"
                         value="Add Comment"
                         type="submit"
