@@ -85,8 +85,10 @@ export default function Post({ post, morePosts, preview }) {
 
                   <div className="s-content__primary">
                     <div className="s-content__entry-content">
-                      {console.log(post.content)}
-                      {post.content}
+                      <div
+                        // className={markdownStyles['markdown']}
+                        dangerouslySetInnerHTML={{ __html: post.content }}
+                      />
                     </div>
 
                     <div className="s-content__entry-meta">
