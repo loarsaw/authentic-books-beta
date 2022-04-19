@@ -25,16 +25,12 @@ function about() {
             <div className="s-content__primary">
               <div className="s-content__page-content">
                 <p className="lead">
-                  Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat
-                  nostrud cupidatat dolor sunt sint sit nisi est eu exercitation
-                  incididunt adipisicing veniam velit id fugiat enim mollit amet
-                  anim veniam dolor dolor irure velit commodo cillum sit nulla
-                  ullamco magna amet magna cupidatat qui labore cillum sit in
-                  tempor veniam consequat non laborum adipisicing aliqua ea nisi
-                  sint ut quis proident ullamco ut dolore culpa occaecat ut
-                  laboris in sit minim cupidatat ut dolor voluptate enim veniam
-                  consequat occaecat fugiat in adipisicing in amet Ut nulla nisi
-                  non ut enim aliqua laborum mollit quis nostrud sed sed.
+                  Books are the lifeline, they just dont contain stories rather
+                  invaluable life lesson.So here are you in safe heaven where
+                  you can see and get list of books that are a must read. If you
+                  take this list carefully it take change you perception.
+                  Once Someone decides to dive into this they feel the true beauty 
+                  and pleasure that a book can offer.
                 </p>
 
                 <p>
@@ -45,14 +41,7 @@ function about() {
                   incididunt adipisicing
                 </p>
 
-                <p>
-                  Lorem ipsum Cillum sit sunt dolore non aute enim pariatur
-                  deserunt magna reprehenderit veniam officia ullamco eiusmod
-                  laborum commodo veniam elit proident enim sit cillum ex
-                  aliquip dolore labore sint ut deserunt officia veniam
-                  consectetur in in quis eu consectetur non sint Duis mollit Ut
-                  magna irure.
-                </p>
+               
 
                 <br />
 
