@@ -41,7 +41,14 @@ function about() {
                   incididunt adipisicing
                 </p>
 
-               
+                <p>
+                  Lorem ipsum Cillum sit sunt dolore non aute enim pariatur
+                  deserunt magna reprehenderit veniam officia ullamco eiusmod
+                  laborum commodo veniam elit proident enim sit cillum ex
+                  aliquip dolore labore sint ut deserunt officia veniam
+                  consectetur in in quis eu consectetur non sint Duis mollit Ut
+                  magna irure.
+                </p>
 
                 <br />
 
