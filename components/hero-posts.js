@@ -1,6 +1,11 @@
 import React from "react";
 import Link from "next/link";
-
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaDribbble,
+} from "react-icons/fa";
 function HeroPost({ title, coverImage, date, excerpt, author, slug }) {
   return (
     <>
@@ -38,6 +43,32 @@ function HeroPost({ title, coverImage, date, excerpt, author, slug }) {
               </div>
             </div>
           </div>
+        </div>
+        <div className="s-hero__social hide-on-mobile-small">
+          <p>Follow</p>
+          <span></span>
+          <ul className="s-hero__social-icons">
+            <li>
+              <a href="#0">
+                <FaFacebookF />
+              </a>
+            </li>
+            <li>
+              <a href="#0">
+                <FaTwitter />
+              </a>
+            </li>
+            <li>
+              <a href="#0">
+                <FaInstagram />
+              </a>
+            </li>
+            <li>
+              <a href="#0">
+                <FaDribbble />
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </>
