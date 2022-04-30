@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect , useState} from "react";
 import Navbar from "@/components/appbar";
 import HeroPost from "@/components/hero-posts";
 import Content from "@/components/content";
@@ -10,6 +10,15 @@ import useSWR from "swr";
 import _ from "lodash";
 import { getMergeId, combineMergeContent } from "@/lib/merge";
 export default function Index({ allPosts }) {
+  const [loading , setLoading] = useState(true)
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+    }
+  }, [loading]);
+  console.log({loading})
   let loading_merge;
   const merge_id = getMergeId();
 
@@ -38,6 +47,9 @@ export default function Index({ allPosts }) {
         /> */}
       </Head>
       <Navbar />
+      <div id={loading ? "preloader" : ""}>
+        <div id={loading ? "loader" : ""}></div>
+      </div>
       <HeroPost
         title={heroPost.title}
         coverImage={heroPost.metadata.cover_image}
