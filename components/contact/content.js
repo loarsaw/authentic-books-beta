@@ -41,7 +41,7 @@ function content() {
                   work rest is covered by publisher. So you are a writer and has
                   written a book or an article or owns a blog and want to be
                   featured in the <b>authenticbooks.in </b> or if you want your masterpiece to
-                  be present to our reader then if might be a really good Idea
+                  be present to our reader then it might be a really good idea
                   to contact us.
                 </p>
 
