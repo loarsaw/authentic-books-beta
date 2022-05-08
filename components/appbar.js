@@ -2,10 +2,21 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-function Appbar() {
+function Appbar({ query, onQueryChange }) {
   const [active, setActive] = useState(false);
+  const [searchActive, setSearchActive] = useState(false);
+
   return (
-    <div id="top" className={active ? "nav-wrap-is-visible" : ""}>
+    <div
+      id="top"
+      className={
+        active
+          ? "nav-wrap-is-visible"
+          : "" || searchActive
+          ? "search-is-visible"
+          : ""
+      }
+    >
       <header className="s-header">
         <div className="s-header__logo">
           <a className="logo" href="index.html">
@@ -115,7 +126,10 @@ function Appbar() {
                     type="search"
                     className="s-header__search-field"
                     placeholder="Search for..."
-                    // value=""
+                    value={query}
+                    onChange={(event) => {
+                      onQueryChange(event.target.value);
+                    }}
                     name="s"
                     title="Search for:"
                     autoComplete="off"
@@ -124,18 +138,25 @@ function Appbar() {
                 <input
                   type="submit"
                   className="s-header__search-submit"
-                  // value="Search"
+                  value="Search"
                 />
               </form>
 
-              <a title="Close Search" className="s-header__overlay-close">
+              <a
+                title="Close Search"
+                className="s-header__overlay-close"
+                onClick={() => setSearchActive(false)}
+              >
                 Close
               </a>
             </div>
           </div>
         </div>
 
-        <a className="s-header__search-trigger" href="#">
+        <a
+          className="s-header__search-trigger"
+          onClick={() => setSearchActive(true)}
+        >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.982 17.983">
             <path
               fill="#010101"

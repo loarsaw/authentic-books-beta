@@ -1,4 +1,4 @@
-import React, {useEffect , useState} from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "@/components/appbar";
 import HeroPost from "@/components/hero-posts";
 import Content from "@/components/content";
@@ -10,15 +10,17 @@ import useSWR from "swr";
 import _ from "lodash";
 import { getMergeId, combineMergeContent } from "@/lib/merge";
 export default function Index({ allPosts }) {
-  const [loading , setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
+  const [query, setQuery] = useState("");
+
   useEffect(() => {
     if (loading) {
       setTimeout(() => {
-      setLoading(false);
-    }, 1500);
+        setLoading(false);
+      }, 1500);
     }
   }, [loading]);
-  console.log({loading})
+  // console.log({ loading });
   let loading_merge;
   const merge_id = getMergeId();
 
@@ -35,8 +37,19 @@ export default function Index({ allPosts }) {
     loading_merge = false;
   }
   allPosts = _.orderBy(allPosts, ["created_at"], ["desc"]);
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+  
+  const filteredBooks = allPosts.filter((book) => {
+    return (
+      book.title.toLowerCase().includes(query.toLowerCase()) ||
+      book.metadata.author.title.toLowerCase().includes(query.toLowerCase())
+    );
+  });
+  const heroPost = filteredBooks[0];
+  const morePosts = filteredBooks.slice(1);
+
+  console.log(allPosts[0].title);
+  console.log(allPosts[0].metadata.author.title);
+
   return (
     <>
       <Head>
@@ -46,7 +59,7 @@ export default function Index({ allPosts }) {
           content={"Get The List of Authentic Books"}
         /> */}
       </Head>
-      <Navbar />
+      <Navbar query={query} onQueryChange={(myQuery) => setQuery(myQuery)} />
       <div id={loading ? "preloader" : ""}>
         <div id={loading ? "loader" : ""}></div>
       </div>
