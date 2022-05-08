@@ -37,7 +37,7 @@ export default function Index({ allPosts }) {
     loading_merge = false;
   }
   allPosts = _.orderBy(allPosts, ["created_at"], ["desc"]);
-  
+
   const filteredBooks = allPosts.filter((book) => {
     return (
       book.title.toLowerCase().includes(query.toLowerCase()) ||
@@ -64,12 +64,26 @@ export default function Index({ allPosts }) {
         <div id={loading ? "loader" : ""}></div>
       </div>
       <HeroPost
-        title={heroPost.title}
-        coverImage={heroPost.metadata.cover_image}
-        date={heroPost.created_at}
-        author={heroPost.metadata.author}
-        slug={heroPost.slug}
-        excerpt={heroPost.metadata.excerpt}
+        title={heroPost == undefined ? allPosts[0].title : heroPost.title}
+        coverImage={
+          heroPost == undefined
+            ? allPosts[0].metadata.cover_image
+            : heroPost.metadata.cover_image
+        }
+        date={
+          heroPost == undefined ? allPosts[0].created_at : heroPost.created_at
+        }
+        author={
+          heroPost == undefined
+            ? allPosts[0].metadata.author
+            : heroPost.metadata.author
+        }
+        slug={heroPost == undefined ? allPosts[0].slug : heroPost.slug}
+        excerpt={
+          heroPost == undefined
+            ? allPosts[0].metadata.excerpt
+            : heroPost.metadata.excerpt
+        }
       />
       <MoreStories posts={morePosts} />
       <Footer />
