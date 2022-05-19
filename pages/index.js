@@ -17,7 +17,7 @@ export default function Index({ allPosts }) {
     if (loading) {
       setTimeout(() => {
         setLoading(false);
-      }, 1500);
+      }, 786);
     }
   }, [loading]);
   // console.log({ loading });
@@ -54,10 +54,7 @@ export default function Index({ allPosts }) {
     <>
       <Head>
         <title> Authentic Books </title>
-        {/* <meta
-          property="og:t"
-          content={"Get The List of Authentic Books"}
-        /> */}
+        <meta property="og:t" content={"Get The List of Authentic Books"} />
       </Head>
       <Navbar query={query} onQueryChange={(myQuery) => setQuery(myQuery)} />
       <div id={loading ? "preloader" : ""}>
@@ -86,6 +83,7 @@ export default function Index({ allPosts }) {
         }
       />
       <MoreStories posts={morePosts} />
+     { console.log({morePosts})}
       <Footer />
     </>
   );

@@ -7,9 +7,11 @@ function ContactAppBar() {
     <div id="top" className={active ? "nav-wrap-is-visible" : ""}>
       <header className="s-header s-header--opaque">
         <div className="s-header__logo">
-          <a className="logo" href="index.html">
-            <img src="/images/logo.svg" />
-          </a>
+          <Link href="/">
+            <a className="logo">
+              <img src="/images/logo.svg" />
+            </a>
+          </Link>
         </div>
         <div className="row s-header__navigation">
           <nav className="s-header__nav-wrap">
@@ -21,40 +23,36 @@ function ContactAppBar() {
                 </Link>
               </li>
               <li className="has-children">
-                <a  title="">
-                  Categories
-                </a>
+                <a title="">Categories</a>
                 <ul className="sub-menu">
                   <li>
-                    <a href="category.html">Design</a>
+                    <a>Design</a>
                   </li>
                   <li>
-                    <a href="category.html">Lifestyle</a>
+                    <a>Lifestyle</a>
                   </li>
                   <li>
-                    <a href="category.html">Photography</a>
+                    <a>Photography</a>
                   </li>
                   <li>
-                    <a href="category.html">Vacation</a>
+                    <a>Vacation</a>
                   </li>
                   <li>
-                    <a href="category.html">Work</a>
+                    <a>Work</a>
                   </li>
                   <li>
-                    <a href="category.html">Health</a>
+                    <a>Health</a>
                   </li>
                   <li>
-                    <a href="category.html">Family</a>
+                    <a>Family</a>
                   </li>
                   <li>
-                    <a href="category.html">Relationship</a>
+                    <a>Relationship</a>
                   </li>
                 </ul>
               </li>
               <li className="has-children">
-                <a  title="">
-                  Blog
-                </a>
+                <a title="">Blog</a>
                 <ul className="sub-menu">
                   <li>
                     <a href="single-video.html">Video Post</a>
@@ -84,7 +82,6 @@ function ContactAppBar() {
               </li>
             </ul>
             <a
-              
               title="Close Menu"
               className="s-header__overlay-close close-mobile-menu"
               onClick={() => setActive(!active)}
@@ -95,7 +92,6 @@ function ContactAppBar() {
         </div>
         <a
           className="s-header__toggle-menu"
-          
           title="Menu"
           onClick={() => setActive(!active)}
         >
@@ -129,11 +125,7 @@ function ContactAppBar() {
                 />
               </form>
 
-              <a
-                
-                title="Close Search"
-                className="s-header__overlay-close"
-              >
+              <a title="Close Search" className="s-header__overlay-close">
                 Close
               </a>
             </div>

@@ -19,9 +19,11 @@ function Appbar({ query, onQueryChange }) {
     >
       <header className="s-header">
         <div className="s-header__logo">
-          <a className="logo" href="index.html">
-            <img src="/images/logo.svg" alt="Homepage" />
-          </a>
+          <Link href="/">
+            <a className="logo">
+              <img src="/images/logo.svg" alt="Homepage" />
+            </a>
+          </Link>
         </div>
 
         <div className="row s-header__navigation">
@@ -30,36 +32,36 @@ function Appbar({ query, onQueryChange }) {
 
             <ul className="s-header__nav">
               <li className="current">
-                <a href="index.html" title="">
-                  Home
-                </a>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
               </li>
               <li className="has-children">
                 <a title="">Categories</a>
                 <ul className="sub-menu">
                   <li>
-                    <a href="category.html">Design</a>
+                    <a>Design</a>
                   </li>
                   <li>
-                    <a href="category.html">Lifestyle</a>
+                    <a>Lifestyle</a>
                   </li>
                   <li>
-                    <a href="category.html">Photography</a>
+                    <a>Photography</a>
                   </li>
                   <li>
-                    <a href="category.html">Vacation</a>
+                    <a>Vacation</a>
                   </li>
                   <li>
-                    <a href="category.html">Work</a>
+                    <a>Work</a>
                   </li>
                   <li>
-                    <a href="category.html">Health</a>
+                    <a>Health</a>
                   </li>
                   <li>
-                    <a href="category.html">Family</a>
+                    <a>Family</a>
                   </li>
                   <li>
-                    <a href="category.html">Relationship</a>
+                    <a>Relationship</a>
                   </li>
                 </ul>
               </li>
@@ -67,13 +69,13 @@ function Appbar({ query, onQueryChange }) {
                 <a title="">Blog</a>
                 <ul className="sub-menu">
                   <li>
-                    <a href="single-video.html">Video Post</a>
+                    <a>Video Post</a>
                   </li>
                   <li>
-                    <a href="single-audio.html">Audio Post</a>
+                    <a>Audio Post</a>
                   </li>
                   <li>
-                    <a href="single-standard.html">Standard Post</a>
+                    <a>Standard Post</a>
                   </li>
                 </ul>
               </li>

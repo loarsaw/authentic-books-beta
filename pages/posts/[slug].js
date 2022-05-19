@@ -13,7 +13,8 @@ import _ from "lodash";
 import Navbar from "@/components/contact/contactappbar";
 import { getMergeId, combineMergeContent } from "@/lib/merge";
 import Date from "@/components/date";
-
+import Footer from "@/components/footer";
+import SlugMorePosts from "@/components/slugMorePosts";
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
   const { slug } = router.query;
@@ -114,45 +115,33 @@ export default function Post({ post, morePosts, preview }) {
                       <div className="meta-bottom">
                         <div className="entry-cat-links meta-blk">
                           <div className="cat-links">
-                            <span>In</span>
+                            <span>In </span>
                             <a href="#0">Frontend</a>
                             <a href="#0">Design</a>
                             <a href="#0">Work</a>
                           </div>
-                          <span>On</span>
+                          <span>On </span>
                           <Date dateString={post.created_at} />
                         </div>
 
-                        <div className="entry-tags meta-blk">
+                        {/* <div className="entry-tags meta-blk">
                           <span className="tagtext">Tags</span>
                           <a href="#">orci</a>
                           <a href="#">lectus</a>
                           <a href="#">varius</a>
                           <a href="#">turpis</a>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
 
-                    <div className="s-content__pagenav">
-                      <div className="prev-nav">
-                        <a href="#" rel="prev">
-                          <span>Previous</span>
-                          Tips on Minimalist Design
-                        </a>
-                      </div>
-                      <div className="next-nav">
-                        <a href="#" rel="next">
-                          <span>Next</span>A Practical Guide to a Minimalist
-                          Lifestyle.
-                        </a>
-                      </div>
-                    </div>
+                    <SlugMorePosts morePosts={morePosts} />
+                    {/* {console.log(morePosts)} */}
                   </div>
                 </article>
               </div>
             </div>
 
-            <div className="comments-wrap">
+            {/* <div className="comments-wrap">
               <div id="comments" className="row">
                 <div className="column large-12">
                   <h3>5 Comments</h3>
@@ -425,9 +414,10 @@ export default function Post({ post, morePosts, preview }) {
                     </fieldset>
                   </form>
                 </div>
-              </div> */}
-            </div>
+              </div> 
+            </div> */}
           </section>
+          <Footer/>
         </>
       )}
     </>
