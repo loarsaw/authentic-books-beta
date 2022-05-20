@@ -47,7 +47,7 @@ function content() {
 
                 <br />
 
-                <div className="row block-large-1-2 block-tab-full s-content__blocks">
+                {/* <div className="row block-large-1-2 block-tab-full s-content__blocks">
                   <div className="column">
                     <h4>Want to Advertise 😃</h4>
                     <p>
@@ -68,13 +68,13 @@ function content() {
                       <a href="mailto:contentmanager@authenticbooks.in">
                         Content Manager
                       </a>
-                      {/* Mail ID :<code>contentmanager@authenticbooks.in</code> */}
+                    
                       <br />
                       With Your Name and
                       <p>Profile Picture(Optional)</p>
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 <form
                   name="cForm"
