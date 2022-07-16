@@ -83,13 +83,13 @@ export default function Index({ allPosts }) {
         }
       />
       <MoreStories posts={morePosts} />
-     { console.log({morePosts})}
+      {console.log({ morePosts })}
       <Footer />
     </>
   );
 }
 
-export async function getStaticProps({ preview }) {
+export async function getServerSideProps({ preview }) {
   const allPosts = (await getAllPostsForHome(preview)) || [];
   return {
     props: { allPosts },
