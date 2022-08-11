@@ -47,9 +47,9 @@ function content() {
 
                 <br />
 
-                {/* <div className="row block-large-1-2 block-tab-full s-content__blocks">
+                <div className="row block-large-1-2 block-tab-full s-content__blocks">
                   <div className="column">
-                    <h4>Want to Advertise 😃</h4>
+                    <h4>Want to Publish 😃</h4>
                     <p>
                       Mail 📩
                       <br />
@@ -74,7 +74,7 @@ function content() {
                       <p>Profile Picture(Optional)</p>
                     </p>
                   </div>
-                </div> */}
+                </div>
 
                 <form
                   name="cForm"
