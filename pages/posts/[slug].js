@@ -95,16 +95,14 @@ export default function Post({ post, morePosts, preview }) {
                     <div className="s-content__entry-meta">
                       <div className="entry-author meta-blk">
                         <div className="author-avatar">
-                          <a
-                            target="_blank"
-                            href="https://www.amazon.in/gp/product/1501110365/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=1501110365&linkCode=as2&tag=authenticbook-21&linkId=9b9b24a759b62a2213c3edf5f166a184"
-                          >
+                      
                             <img
                               border="0"
-                              src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=IN&ASIN=1501110365&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=authenticbook-21"
+                             src={post.metadata.author.metadata.picture.imgix_url}
+                              // src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=IN&ASIN=1501110365&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=authenticbook-21"
                               className="avatar"
                             />
-                          </a>
+                          {/* </a> */}
                         </div>
                         <div className="byline">
                           <span className="bytext">Posted By</span>

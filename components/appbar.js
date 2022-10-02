@@ -65,7 +65,7 @@ function Appbar({ query, onQueryChange }) {
                   </li>
                 </ul>
               </li>
-              <li className="has-children">
+              {/* <li className="has-children">
                 <a title="">Blog</a>
                 <ul className="sub-menu">
                   <li>
@@ -78,12 +78,12 @@ function Appbar({ query, onQueryChange }) {
                     <a>Standard Post</a>
                   </li>
                 </ul>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="styles.html" title="">
                   Styles
                 </a>
-              </li>
+              </li> */}
               <li>
                 <Link href="/about">
                   <a>About</a>
