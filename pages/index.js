@@ -55,6 +55,10 @@ export default function Index({ allPosts }) {
       <Head>
         <title> Authentic Books </title>
         <meta property="og:t" content={"Get The List of Authentic Books"} />
+        <meta
+          name="google-site-verification"
+          content="4zHj1QalhiOxRR_1CvWMNVNc5OV1o7WFK4zZQU8ePeU"
+        />
       </Head>
       <Navbar query={query} onQueryChange={(myQuery) => setQuery(myQuery)} />
       <div id={loading ? "preloader" : ""}>

@@ -95,13 +95,14 @@ export default function Post({ post, morePosts, preview }) {
                     <div className="s-content__entry-meta">
                       <div className="entry-author meta-blk">
                         <div className="author-avatar">
-                      
-                            <img
-                              border="0"
-                             src={post.metadata.author.metadata.picture.imgix_url}
-                              // src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=IN&ASIN=1501110365&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=authenticbook-21"
-                              className="avatar"
-                            />
+                          <img
+                            border="0"
+                            src={
+                              post.metadata.author.metadata.picture.imgix_url
+                            }
+                            // src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=IN&ASIN=1501110365&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=authenticbook-21"
+                            className="avatar"
+                          />
                           {/* </a> */}
                         </div>
                         <div className="byline">
@@ -415,7 +416,7 @@ export default function Post({ post, morePosts, preview }) {
               </div> 
             </div> */}
           </section>
-          <Footer/>
+          <Footer />
         </>
       )}
     </>
