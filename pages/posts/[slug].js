@@ -72,14 +72,7 @@ export default function Post({ post, morePosts, preview }) {
                 <article className="s-content__entry format-standard">
                   <div className="s-content__media">
                     <div className="s-content__post-thumb">
-                      <iframe
-                        width="100%"
-                        height="166"
-                        scrolling="no"
-                        frameBorder="no"
-                        allow="autoplay"
-                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/80822997&color=%23dedede&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-                      ></iframe>
+                      
                     </div>
                   </div>
 
