@@ -60,6 +60,11 @@ export default function Post({ post, morePosts, preview }) {
               property="og:image"
               content={post.metadata.cover_image.imgix_url}
             />
+            <script
+              async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3824752790784066"
+              crossorigin="anonymous"
+            ></script>
           </Head>
           <section className="s-content">
             <div className="row">
