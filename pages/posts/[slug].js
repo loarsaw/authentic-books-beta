@@ -63,7 +63,7 @@ export default function Post({ post, morePosts, preview }) {
             <script
               async
               src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3824752790784066"
-              crossorigin="anonymous"
+              crossOrigin="anonymous"
             ></script>
           </Head>
           <section className="s-content">
