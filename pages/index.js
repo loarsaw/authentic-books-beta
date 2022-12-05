@@ -59,11 +59,6 @@ export default function Index({ allPosts }) {
           name="google-site-verification"
           content="4zHj1QalhiOxRR_1CvWMNVNc5OV1o7WFK4zZQU8ePeU"
         />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3824752790784066"
-          crossOrigin="anonymous"
-        ></script>
       </Head>
       <Navbar query={query} onQueryChange={(myQuery) => setQuery(myQuery)} />
       <div id={loading ? "preloader" : ""}>
