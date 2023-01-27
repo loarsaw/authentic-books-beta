@@ -26,12 +26,12 @@ function footer() {
               <li>
                 <a href="#0">Blog</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#0">FAQ</a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="#0">Terms</a>
-              </li>
+              </li> */}
               <li>
                 <a href="#0">Privacy Policy</a>
               </li>
@@ -47,12 +47,12 @@ function footer() {
               <li>
                 <a href="#0">Facebook</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#0">Dribbble</a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="#0">Pinterest</a>
-              </li>
+              </li> */}
               <li>
                 <a href="#0">Instagram</a>
               </li>
