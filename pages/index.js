@@ -12,7 +12,7 @@ import { getMergeId, combineMergeContent } from "@/lib/merge";
 export default function Index({ allPosts }) {
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState("");
-
+  console.log(allPosts);
   useEffect(() => {
     if (loading) {
       setTimeout(() => {
