@@ -1,37 +1,27 @@
 {
-  "name": "authbooks",
+  "name": "akskld",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.0",
-    "@fortawesome/free-solid-svg-icons": "^6.1.0",
-    "@fortawesome/react-fontawesome": "^0.1.18",
-    "@vercel/analytics": "^0.1.11",
-    "cosmicjs": "^3.2.43",
-    "date-fns": "^2.14.0",
-    "firebase": "^9.22.1",
-    "font-awesome": "^4.7.0",
-    "lazysizes": "^5.2.1-rc2",
-    "lodash": "^4.17.21",
-    "next": "12.1.0",
-    "next-sitemap": "^3.1.52",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.3.1",
-    "react-imgix": "^9.0.2",
-    "remark": "^12.0.0",
-    "remark-html": "^15.0.1",
-    "swr": "^0.3.9"
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.0.4"
   },
   "devDependencies": {
-    "eslint": "8.11.0",
-    "eslint-config-next": "12.1.0"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4"
   }
 }
