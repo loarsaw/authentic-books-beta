@@ -1,36 +1,38 @@
-import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
-import cx from "classnames";
-import { sfPro, inter } from "./fonts";
-import Nav from "@/components/layout/nav";
-import Footer from "@/components/layout/footer";
-import { Suspense } from "react";
+import React from 'react';
+import '../styles/globals.css';
+import { getGlobalData } from '../lib/cosmic';
+import Generator from 'next/font/local';
+import Banner from '../components/Banner';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-export const metadata = {
-  title: "Precedent - Building blocks for your Next.js project",
-  description:
-    "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
-  metadataBase: new URL("https://precedent.dev"),
-  themeColor: "#FFF",
-};
+const sans = Generator({
+  src: '../fonts/Generator-Variable.ttf',
+  variable: '--font-sans',
+});
+
+export async function generateMetadata() {
+  const siteData = await getGlobalData();
+  return {
+    title: siteData.metadata.site_title,
+    description: siteData.metadata.site_tag,
+  };
+}
 
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const siteData = await getGlobalData();
+
   return (
-    <html lang="en">
-      <body className={cx(sfPro.variable, inter.variable)}>
-        <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
-        <Suspense fallback="...">
-          <Nav />
-        </Suspense>
-        <main className="flex min-h-screen w-full flex-col items-center justify-center py-32">
-          {children}
-        </main>
+    <html lang="en" className={`${sans.variable} font-sans`}>
+      <body className="bg-white dark:bg-zinc-950">
+        <Banner />
+        <Header name={siteData} />
+        {children}
         <Footer />
-        <Analytics />
       </body>
     </html>
   );

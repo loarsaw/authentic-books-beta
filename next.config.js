@@ -1,19 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+
+module.exports = {
   swcMinify: true,
   images: {
-    domains: ["lh3.googleusercontent.com", "vercel.com"],
-  },
-  async redirects() {
-    return [
-      {
-        source: "/github",
-        destination: "https://github.com/steven-tey/precedent",
-        permanent: false,
-      },
-    ];
+    domains: ['imgix.cosmicjs.com'],
+    formats: ['image/avif', 'image/webp'],
   },
 };
-
-module.exports = nextConfig;
