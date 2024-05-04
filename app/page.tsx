@@ -1,22 +1,20 @@
 import React from 'react';
-import PostCard from '../components/PostCard';
-import { getAllPosts } from '../lib/cosmic';
 
 export default async function Page(): Promise<JSX.Element> {
-  const posts = await getAllPosts();
-
   return (
-    <main className="mx-auto mt-4 w-full max-w-3xl flex-col space-y-16 px-4 lg:px-0">
-      {!posts && 'You must add at least one Post to your Bucket'}
-      {posts &&
-        posts.map((post) => {
-          return (
-            <div key={post.id}>
-              <PostCard post={post} />
-            </div>
-          );
-        })}
-    </main>
+    <div
+      className="flex
+  h-screen flex-col items-center justify-center
+  "
+    >
+      <div>
+        <p className="text-4xl antialiased">
+          <a className="underline decoration-[#243c5a]">Auth</a>entic Books
+        </p>
+      </div>
+      <div className="mt-5">
+        <p>Feed your mind</p>
+      </div>
+    </div>
   );
 }
-export const revalidate = 60;

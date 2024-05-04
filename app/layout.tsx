@@ -15,10 +15,9 @@ const sans = Generator({
 });
 
 export async function generateMetadata() {
-  const siteData = await getGlobalData();
   return {
-    title: siteData.metadata.site_title,
-    description: siteData.metadata.site_tag,
+    title: 'Authentic Books',
+    description: 'Feed your mind',
   };
 }
 
@@ -27,8 +26,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const siteData = await getGlobalData();
-
   return (
     <html lang="en">
       <body className=" ">
@@ -37,12 +34,7 @@ export default async function RootLayout({
             <div className="absolute  h-full w-full">
               <SparklesCore />
             </div>
-            <div className="relative">
-              <Banner />
-              <Header name={siteData} />
-              {children}
-              <Footer />
-            </div>
+            <div className="">{children}</div>
           </div>
         </Theme>
       </body>
