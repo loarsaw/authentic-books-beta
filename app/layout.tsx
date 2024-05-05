@@ -6,6 +6,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SparklesCore } from '../components/Stars/Starts';
 import { Theme } from '@radix-ui/themes';
 import Timer from '../components/timer';
+import Sparkles from '../components/sparkles';
 
 const sans = Generator({
   src: '../fonts/Generator-Variable.ttf',
@@ -30,7 +31,7 @@ export default async function RootLayout({
         <Theme>
           <div className=" relative bg-gray-900 dark:bg-zinc-950">
             <div className="absolute h-full w-full">
-              <SparklesCore />
+              <Sparkles />
             </div>
             <div className="absolute bottom-0 right-0">
               <Timer />
