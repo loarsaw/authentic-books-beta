@@ -8,6 +8,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { SparklesCore } from '../components/Stars/Starts';
 import { Theme } from '@radix-ui/themes';
+import Timer from '../components/timer';
 
 const sans = Generator({
   src: '../fonts/Generator-Variable.ttf',
@@ -31,8 +32,11 @@ export default async function RootLayout({
       <body className=" ">
         <Theme>
           <div className=" relative bg-gray-900 dark:bg-zinc-950">
-            <div className="absolute  h-full w-full">
+            <div className="absolute h-full w-full">
               <SparklesCore />
+            </div>
+            <div className="absolute bottom-0 right-0">
+              <Timer />
             </div>
             <div className="">{children}</div>
           </div>
