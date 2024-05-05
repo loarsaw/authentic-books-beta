@@ -11,6 +11,7 @@ const IndividualPost = (props: Props) => {
       setModal(true);
     }, 3000);
   }, []);
+  
   return (
     <div className="flex h-full min-h-screen flex-col items-center justify-center text-white">
       <div>
@@ -39,9 +40,9 @@ const IndividualPost = (props: Props) => {
               <cite className="pe-3 font-medium text-gray-900 dark:text-white">
                 Sage
               </cite>
-              <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">
+              {/* <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">
                 Evelyn Nightshade
-              </cite>
+              </cite> */}
             </div>
           </figcaption>
         </figure>
