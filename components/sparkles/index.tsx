@@ -5,11 +5,7 @@ import { SparklesCore } from '../Stars/Starts';
 type Props = {};
 
 const Sparkles = (props: Props) => {
-  return (
-    <div>
-      <SparklesCore />
-    </div>
-  );
+  return <SparklesCore />;
 };
 
 export default Sparkles;
