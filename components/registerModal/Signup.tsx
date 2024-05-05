@@ -22,13 +22,13 @@ const Signup = ({ onClose }: Props) => {
         <div className="relative max-h-full w-full max-w-md p-4">
           <div className="relative rounded-lg hue-rotate-60">
             <div className="flex w-[20rem] items-center justify-between  rounded-t border-b p-4 dark:border-gray-600 md:p-5">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+              <h3 className="text-xl font-semibold text-white">
                 Transform your life
               </h3>
               <button
                 onClick={onClose}
                 type="button"
-                className="end-2.5 ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+                className="end-2.5 ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:hover:bg-gray-600 dark:hover:text-white"
                 data-modal-hide="authentication-modal"
               >
                 <svg
@@ -51,7 +51,7 @@ const Signup = ({ onClose }: Props) => {
             <div className="p-4 md:p-5">
               <form className="space-y-4" action="#">
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
+                  <label className="mb-2 block text-sm font-medium text-white">
                     Your email
                   </label>
                   <input
