@@ -1,9 +1,10 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useRef } from 'react';
 import '../styles/globals.css';
 import '@radix-ui/themes/styles.css';
 import Generator from 'next/font/local';
 import { Analytics } from '@vercel/analytics/react';
-import { SparklesCore } from '../components/Stars/Starts';
+import { io, Socket } from 'socket.io-client';
 import { Theme } from '@radix-ui/themes';
 import Timer from '../components/timer';
 import Sparkles from '../components/sparkles';
@@ -13,18 +14,33 @@ const sans = Generator({
   variable: '--font-sans',
 });
 
-export async function generateMetadata() {
-  return {
-    title: 'Authentic Books',
-    description: 'Feed your mind',
-  };
-}
+// export async function generateMetadata() {
+//   return {
+//     title: 'Authentic Books',
+//     description: 'Feed your mind',
+//   };
+// }
 
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const socket: any = useRef();
+  const connectionUrl = 'http://3.110.216.79:5001';
+  function connectSocket() {
+    socket.current = io(connectionUrl, {
+      transports: ['websocket'],
+      query: {
+        uid: '12092',
+      },
+    });
+    socket.current.on('connection');
+  }
+  useEffect(() => {
+    connectSocket();
+  }, []);
+
   return (
     <html lang="en">
       <body className=" ">
