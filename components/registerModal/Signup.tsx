@@ -1,4 +1,8 @@
 'use client';
+<<<<<<< HEAD
+=======
+import axios from 'axios';
+>>>>>>> 695ffe657c2d6e2f8c673de4d9953644c6370bb5
 import React, { useState } from 'react';
 
 type Props = {
@@ -9,11 +13,19 @@ const Signup = ({ onClose }: Props) => {
   const [mail, setMail] = useState('abc@gmail.com');
 
   function sendMe() {
+<<<<<<< HEAD
     // const mailData = new FormData();
     // mailData.append('mail', mail);
     // axios.post('/api/inform', mailData).then(() => {
       
     // });
+=======
+    const mailData = new FormData();
+    mailData.append('mail', mail);
+    axios.post('/api/inform', mailData).then(() => {
+      
+    });
+>>>>>>> 695ffe657c2d6e2f8c673de4d9953644c6370bb5
   }
   return (
     <div className="bg-transparent backdrop-blur-md ">
