@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,57 +8,42 @@ import { Post } from '../lib/types';
 import AuthorAttribution from './AuthorAttribution';
 import AuthorAvatar from './AuthorAvatar';
 import { sanitize } from 'isomorphic-dompurify';
+import { useRouter } from 'next/navigation';
 
 export default function PostCard({ post }: { post: Post }) {
+  const router = useRouter();
   return (
     <div>
-      {post.metadata.hero?.imgix_url && (
-        <Link href={`/posts/${post.slug}`}>
-          <Image
-            width={2800}
-            height={400}
-            className="mb-5 h-[400px] w-full rounded-xl bg-no-repeat object-cover object-center transition-transform duration-200 ease-out hover:scale-[1.02]"
-            src={`${post.metadata.hero?.imgix_url}?w=1400&auto=format`}
-            priority
-            alt={post.title}
-            placeholder="blur"
-            blurDataURL={`${post.metadata.hero?.imgix_url}?auto=format,compress&q=1&blur=500&w=2`}
+      <div className="relative mt-6 flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+        <div className="bg-blue-gray-500 shadow-blue-gray-500/40 relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-clip-border text-white shadow-lg">
+          {post.metadata.hero?.imgix_url && (
+            <img
+              src={`${post.metadata.hero?.imgix_url}?w=1400&auto=format`}
+              alt="card-image"
+            />
+          )}
+        </div>
+        <div className="p-6">
+          <h5 className="text-blue-gray-900 mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal antialiased">
+            {post.title}
+          </h5>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: sanitize(post.metadata.teaser) ?? '',
+            }}
+            className="line-clamp-5 block font-sans text-base font-light leading-relaxed text-inherit antialiased"
           />
-        </Link>
-      )}
-      <h2 className="pb-3 text-xl font-semibold tracking-tight text-zinc-800 dark:text-zinc-200">
-        <Link href={`/posts/${post.slug}`}>{post.title}</Link>
-      </h2>
-      <div className="flex flex-col justify-between space-y-4 md:flex-row md:space-y-0">
-        <div className="flex items-center space-x-2 text-zinc-500 dark:text-zinc-400 md:space-y-0">
-          <AuthorAvatar post={post} />
-          <AuthorAttribution post={post} />
         </div>
-        <div className="flex select-none justify-start space-x-2 md:hidden md:justify-end">
-          {post.metadata.categories &&
-            post.metadata.categories.map((category) => (
-              <Tag key={category.title}>{category.title}</Tag>
-            ))}
-        </div>
-      </div>
-      <div
-        className="py-6 text-zinc-500 dark:text-zinc-300"
-        dangerouslySetInnerHTML={{
-          __html: sanitize(post.metadata.teaser) ?? '',
-        }}
-      />
-      <div className="flex items-center justify-between font-medium text-green-600 dark:text-green-200">
-        <Link href={`/posts/${post.slug}`}>
-          <div className="flex items-center space-x-2">
-            <span>Read more</span>
-            <ArrowRight className="h-4 w-4 text-inherit" />
-          </div>
-        </Link>
-        <div className="hidden select-none justify-end space-x-2 md:flex ">
-          {post.metadata.categories &&
-            post.metadata.categories.map((category) => (
-              <Tag key={category.title}>{category.title}</Tag>
-            ))}
+        <div className="p-6 pt-0">
+          <button
+            onClick={() => {
+              router.push(`/posts/${post.slug}`);
+            }}
+            className="select-none rounded-lg bg-gray-900 px-6 py-3 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            type="button"
+          >
+            Read More
+          </button>
         </div>
       </div>
     </div>
