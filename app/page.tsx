@@ -18,7 +18,9 @@ export default async function Page(): Promise<JSX.Element> {
             );
           })}
       </div> */}
-      <div><p>Coming UP</p></div>
+      <div>
+        <p>Coming UP</p>
+      </div>
     </main>
   );
 }
