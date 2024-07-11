@@ -9,6 +9,7 @@ export default function AuthorAttribution({
   return (
     <div className="flex space-x-1">
       <span>by</span>
+      
       <a
         href={`/author/${post.metadata.author?.slug}`}
         className="font-medium text-green-600 dark:text-green-200"
