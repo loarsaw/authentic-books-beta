@@ -1,4 +1,3 @@
-'use client';
 import React, { useEffect, useRef } from 'react';
 import '../styles/globals.css';
 import { getGlobalData } from '../lib/cosmic';
