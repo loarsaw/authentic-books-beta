@@ -27,6 +27,24 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+<<<<<<< HEAD
+=======
+  const socket: any = useRef();
+  const connectionUrl = 'http://3.110.216.79:5001';
+  // function connectSocket() {
+  //   socket.current = io(connectionUrl, {
+  //     transports: ['websocket'],
+  //     query: {
+  //       uid: '12092',
+  //     },
+  //   });
+  //   socket.current.on('connection');
+  // }
+  // useEffect(() => {
+  //   connectSocket();
+  // }, []);
+
+>>>>>>> f064467 (new changes)
   return (
     <html lang="en">
       <body className=" ">
