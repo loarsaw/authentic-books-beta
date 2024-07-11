@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/globals.css';
 import { getGlobalData } from '../lib/cosmic';
 import Generator from 'next/font/local';
-import Header from '../components/Header';
 
 const sans = Generator({
   src: '../fonts/Generator-Variable.ttf',
@@ -27,7 +26,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${sans.variable} font-sans`}>
       <body className="bg-white dark:bg-zinc-950">
-        <Header name={siteData} />
+        {/* <Header name={siteData} /> */}
         {children}
       </body>
     </html>
