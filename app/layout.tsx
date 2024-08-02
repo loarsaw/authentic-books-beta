@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import '../styles/globals.css';
 import { getGlobalData } from '../lib/cosmic';
 import Generator from 'next/font/local';
