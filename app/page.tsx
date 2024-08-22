@@ -7,7 +7,7 @@ export default async function Page(): Promise<JSX.Element> {
 
   return (
     <main className="mt-4 w-full flex-col space-y-16 px-4 lg:px-0">
-      {/* {!posts && 'You must add at least one Post to your Bucket'}
+      {!posts && 'You must add at least one Post to your Bucket'}
       <div className="grid grid-cols-1 gap-1 space-y-3 md:grid-cols-3">
         {posts &&
           posts.map((post) => {
@@ -17,9 +17,6 @@ export default async function Page(): Promise<JSX.Element> {
               </div>
             );
           })}
-      </div> */}
-      <div>
-        <p>Coming UP</p>
       </div>
     </main>
   );
