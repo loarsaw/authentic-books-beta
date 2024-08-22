@@ -1,12 +1,3 @@
 {
-
-    "editor.colorDecorators": true,
-    "workbench.colorTheme": "Default Light Modern",
-    "cssVariables.lookupFiles": [
-      "**/*.css",
-      "**/*.scss",
-      "**/*.sass",
-      "**/*.less",
-      "node_modules/@mantine/core/styles.css"
-    ]
-  }
+    "git.ignoreLimitWarning": true
+}
