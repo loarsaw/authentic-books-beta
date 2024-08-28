@@ -1,7 +1,7 @@
 "use client";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
-
+import axios from "axios";
 export default function Page() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -25,6 +25,29 @@ export default function Page() {
   useEffect(() => {
     console.log(books_array);
   }, [books_array]);
+
+  async function get_data() {
+    // const data = await fetch("http://localhost:8000/getData", {
+    //   method: "POST",
+    //   body: {
+    //     prompt:
+    //       "give me link to the any book I can purchase it from amazon only in json format with name and desccription",
+    //   },
+    // });
+    // const books = await data.json();
+    // console.log(books);
+    const date = await axios.post("http://localhost:8000/getData", {
+      prompt:
+        "give me link to the any book I can purchase it from amazon only in json format with name and desccription",
+    });
+    // const new_data = JSON.parse(date.data);
+    console.log(
+      date.data.response
+        .replace(/^```json\n/, "") // Remove the ```json\n at the start
+        .replace(/\n```$/, "")
+    );
+    // console.log(new_data);
+  }
   console.log(isInView);
   return (
     <motion.div
@@ -44,8 +67,11 @@ export default function Page() {
             <img src="/logo/logo-nobg.svg" className="w-[32rem]" alt="" />
           </div>
           <div className="mt-5 pt-5">
-            <button className="border-2 w-[15rem] border-solid border-orange-500 p-3">
-              <span>Start</span>
+            <button
+              onClick={get_data}
+              className="border-2 w-[15rem] border-solid border-orange-500 p-3"
+            >
+              <span>Recommend </span>
               <span>{"->"}</span>
             </button>
           </div>

@@ -17,6 +17,7 @@
     "@mantine/notifications": "^7.1.7",
     "@mantine/nprogress": "^7.1.7",
     "@mantine/spotlight": "^7.1.7",
+    "axios": "^1.7.4",
     "dayjs": "^1.11.10",
     "framer-motion": "^11.3.29",
     "next": "14.0.1",
